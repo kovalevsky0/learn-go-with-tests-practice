@@ -1,4 +1,4 @@
-package arrays_and_slices
+package sum
 
 import (
 	"reflect"
@@ -56,11 +56,11 @@ func TestSumAllTails(t *testing.T) {
 	})
 
 	t.Run("make a sum of slices with empty items", func(t *testing.T) {
-		firstRow := []int{}
+		firstRow := []int{1, 2, 3}
 		secondRow := []int{3, 4, 5}
 
 		sum := SumAllTails(firstRow, secondRow)
-		expected := []int{0, 9}
+		expected := []int{5, 9}
 
 		if !reflect.DeepEqual(expected, sum) {
 			t.Errorf("Expected '%d' but received '%d' when firstRow = %v, secondRow = %v", expected, sum, firstRow, secondRow)

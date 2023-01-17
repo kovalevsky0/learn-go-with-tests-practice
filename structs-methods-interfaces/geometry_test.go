@@ -1,4 +1,4 @@
-package structs_methods_interfaces
+package geometry
 
 import "testing"
 
